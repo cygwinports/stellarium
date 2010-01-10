@@ -1,0 +1,15 @@
+inherit qt4-cmake
+
+DESCRIPTION="Planetarium software"
+HOMEPAGE="http://www.stellarium.org/"
+SRC_URI="mirror://sourceforge/stellarium/${P}.tar.gz"
+
+CYGCMAKE_ARGS="-DENABLE_SOUND=ON"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	newicon ${S}/doc/images/stellarium-logo.png stellarium.png
+	make_desktop_entry stellarium Stellarium stellarium "Education;Science;Astronomy;Qt;"
+}
