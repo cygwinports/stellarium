@@ -1,5 +1,5 @@
 category: Science
-requires: libgcc1 libGL1 libGLU1 libintl8 libphonon4 libQtCore4 libQtGui4 libQtNetwork4 libQtOpenGL4 libQtScript4 libQtSql4 libstdc++6 zlib0
+requires: libgcc1 libGL1 libGLU1 libintl8 libphonon4 libQtCore4 libQtGui4 libQtNetwork4 libQtOpenGL4 libQtScript4 libstdc++6 zlib0
 sdesc: "Planetarium program"
 ldesc: "Stellarium is a free open source planetarium for your computer. 
 It shows a realistic sky in 3D, just like what you see with the naked 
