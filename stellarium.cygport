@@ -1,0 +1,23 @@
+inherit qt4-cmake
+
+NAME="stellarium"
+VERSION=0.11.0
+RELEASE=1
+CATEGORY="Science"
+SUMMARY="Planetarium program"
+DESCRIPTION="Stellarium is a free open source planetarium for your computer.
+It shows a realistic sky in 3D, just like what you see with the naked eye,
+binoculars or a telescope. It is being used in planetarium projectors. Just
+set your coordinates and go."
+HOMEPAGE="http://www.stellarium.org/"
+SRC_URI="mirror://sourceforge/stellarium/${NAME}-${VERSION}.tar.gz"
+
+CYGCMAKE_ARGS="-DENABLE_SOUND=ON"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	newicon ${S}/doc/images/stellarium-logo.png stellarium.png
+	make_desktop_entry stellarium Stellarium stellarium "Education;Science;Astronomy;Qt;"
+}
