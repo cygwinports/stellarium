@@ -1,7 +1,7 @@
-inherit qt4-cmake
+inherit qt5 cmake
 
 NAME="stellarium"
-VERSION=0.13.1
+VERSION=0.13.3
 RELEASE=1
 CATEGORY="Science"
 SUMMARY="Planetarium program"
@@ -11,10 +11,6 @@ binoculars or a telescope. It is being used in planetarium projectors. Just
 set your coordinates and go."
 HOMEPAGE="http://www.stellarium.org/"
 SRC_URI="mirror://sourceforge/stellarium/${NAME}-${VERSION}.tar.gz"
-#PATCH_URI="0.11.4-cygwin-fonts.patch"
-
-CXXFLAGS+=" -D_GNU_SOURCE=1"
-#CYGCMAKE_ARGS="-DENABLE_SOUND=ON"
 
 src_install() {
 	cd ${B}
